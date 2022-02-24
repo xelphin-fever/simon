@@ -1,0 +1,206 @@
+
+/*-- GENERAL-STYLING --*/
+
+:root {
+  --backgroundColor:rgb(253, 249, 230);
+  --shadow: rgb(231, 223, 182);
+  --red: rgb(255, 153, 153);
+  --green: rgb(181, 255, 181);
+  --yellow: rgb(255, 255, 180);
+  --blue: rgb(179, 179, 255);
+  --textPrimary: rgb(182, 101, 54);
+  --textSecondary: rgb(143, 77, 38);
+  
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body{
+  font-family: 'Patrick Hand', cursive;
+  font-weight:100;
+  padding: 10px 40px 50px 40px;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  color: var(--backgroundColor);
+  background: var(--textPrimary);
+}
+
+/*---- TOP ----*/
+
+
+#title-div {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*-- Title --*/
+#title-div > h1 {
+  color: var(--textPrimary);
+  font-size: 120px;
+  letter-spacing: 0.2em;
+  height: max-content;
+  transition: 0.3s all linear;
+  text-shadow: -5px 5px var(--shadow);
+}
+#title-div > h1:hover {
+  transform: translate(-2px,2px);
+  text-shadow: -3px 3px var(--shadow);
+}
+
+/*-- Subtitle --*/
+#title-div > h2 {
+  font-size: 30px;
+  color: var(--textSecondary);
+}
+
+
+/*---- GAME BODY ----*/
+
+#game-div{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+/*-- INFO ELEMENTS --*/
+#info-main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--textPrimary);
+}
+
+/*-- Start Button --*/
+.btn{
+  color: var(--textPrimary);
+  background-color: var(--backgroundColor);
+  padding: 3px 15px;
+  font-size: 30px;
+  border-color: var(--textPrimary);
+  box-shadow: -8px 8px var(--shadow);
+  text-shadow: 2px -2px var(--shadow);
+  margin: 10px 0;
+  transition: all 0.2s linear;
+  font-family: 'Patrick Hand', cursive;
+  letter-spacing: 3px;
+}
+.btn:hover{
+  box-shadow: -4px 4px var(--shadow);
+  text-shadow: 2.5px -2.5px var(--shadow);
+  transform: translate(-2px,2px);
+  margin: 10px 0;
+}
+
+
+/*-- COLORS --*/
+
+.color-div{
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  width: 34vw;
+  height: 34vw;
+  align-items: center;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.color{
+  width: 15vw;
+  height: 15vw;
+  background-color: black;
+  transition: 0.2s linear;
+}
+.color:active {
+  transition: 0.05s linear;
+  filter: saturate(1.7) brightness(98%);
+}
+
+/*TODO: possible make generic css creater in js for the below*/
+
+#color-yellow {
+  border-radius: 100% 0 0 0;
+  background-color: var(--yellow);
+  box-shadow: 10px 10px var(--shadow);
+}
+#color-yellow:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 6px 6px var(--shadow);
+}
+
+#color-blue {
+  border-radius: 0 100% 0 0;
+  background-color: var(--blue);
+  box-shadow: -10px 10px var(--shadow);
+}
+#color-blue:hover {
+  transform: translate(-5px, 5px);
+  box-shadow: -6px 6px var(--shadow);
+}
+
+#color-red {
+  border-radius: 0 0 0 100%;
+  background-color: var(--red);
+  box-shadow: 10px -10px var(--shadow);
+}
+#color-red:hover {
+  transform: translate(5px, -5px);
+  box-shadow: 6px -6px var(--shadow);
+}
+
+#color-green {
+  border-radius: 0 0 100% 0;
+  background-color: var(--green);
+  box-shadow: -10px -10px var(--shadow);
+}
+#color-green:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: -6px -6px var(--shadow);
+}
+
+/*-- STYLE ELEMENTS --*/
+
+.style-selection-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--textPrimary);
+}
+.style-selection-inner-div{
+  width: 100%;
+}
+.themes-btns-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.theme-btn {
+  transform: scale(60%);
+}
+.theme-btn:hover {
+  transform: scale(63%);
+}
+
+
+
+

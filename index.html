@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--METADATA-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--IMPORTS-->
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <!--CSS-->
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <link href="./sliderStyle.css" rel="stylesheet" type="text/css" />
+  <!--WEBSITE TITLE-->
+  <title>Simon Game</title>
+</head>
+<body>
+
+  <!--TITLE-->
+  <div id="title-div">
+    <h1>SIMON</h1>
+    <h2>Click on the colors in the sequence presented</h3>
+  </div>
+
+  <!--GAME BODY-->
+  <div id="game-div">
+
+    <!--LEFT-ELEMENTS (Start, Count, High-Score)-->
+    <div id="info-main-div">
+      <div class="info-curr-div">
+        <!--START-->
+        <button class="btn">START</button>
+        <!--COUNT-->
+        <h3>Count: <span id="count-span">0</span></h3>
+      </div>
+      <div class="info-high-score-div">
+        <!--HIGH SCORE-->
+        <h3>High Score: <span id="high-score-span">0</span></h3>
+      </div>
+    </div>
+
+    <!--COLORS-->
+    <div class="color-div">
+      <div class="color" data-color="yellow" id="color-yellow"></div>
+      <div class="color" data-color="blue" id="color-blue"></div>
+      <div class="color" data-color="red" id="color-red"></div>
+      <div class="color" data-color="green" id="color-green"></div>
+    </div>
+
+    <!--RIGHT-ELEMENTS (Themes, Light Slider)-->
+    <div class="style-selection-div">
+      <!--THEME SELECTOR-->
+      <div class="style-selection-div style-selection-inner-div">
+        <h3>Themes</h3>
+        <div class="themes-btns-div">
+          <button class="theme-btn btn" data-theme="pastel">❤️</button>
+          <button class="theme-btn btn" data-theme="night">🌙</button>
+          <button class="theme-btn btn" data-theme="rainbow">🌈</button>
+        </div>
+      </div>
+      <!--LIGHT SELECTOR-->
+      <div class="style-selection-div style-selection-inner-div">
+        <h3>Light Slider</h3>
+        <div class="slider-div">
+          <input type="range" min="1" max="100" value="50" class="slider" id="light-range">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
+
+
+<!--
+CODING INSTRUCTIONS
+
+Class Names:
+  - At end of class name add "-type": example "start-btn" (generally)
+
+h# description
+  - h1: title
+  - h2: sub-title
+  - h3: text
+-->
